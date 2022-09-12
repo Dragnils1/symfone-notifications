@@ -1,0 +1,19 @@
+<h1>Hello {{ user_first_name }}!</h1>
+<p>You have {{ notifications|length }} new notifications.</p>
+<a href="{{ path('lucky_num') }}">lucky_num</a>
+{# absolute urls #}
+<a href="{{ url('lucky_num') }}"> lucky_num </a>. 
+<p>Username: {{ app.user.username ?? 'Anonymous user' }}</p>
+{% if app.debug %}
+    <p>Request method: {{ app.request.method }}</p>
+    <p>Application Environment: {{ app.environment }}</p>
+{% endif %}
+
+{# the image lives at "public/images/logo.png" #}
+{# <img src="{{ asset('images/img162024164944.png') }}" alt="Symfony!"/> #}
+
+{# the CSS file lives at "public/css/blog.css" #}
+{# <link href="{{ asset('css/notification.css') }}" rel="stylesheet"/> #}
+
+{# the JS file lives at "public/bundles/acme/js/loader.js" #}
+{# <script src="{{ asset('scripts/notification.js') }}"></script> #}
